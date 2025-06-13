@@ -1,0 +1,329 @@
+@charset "utf-8";
+
+
+
+/* 컬러시스템 */
+:root{
+    --light-blue:#4db1ec;
+    --blue:#1655cc;
+    --purple:#b473bf;
+    --pink:#ffa9ba;
+    --orange:#ff9f67;
+    --yellow:#ffd673;
+    --libht-green:#a2e29b;
+    --green:#00811c;
+    --gray:#333333;
+    --white:#ffffff;
+    --black:#000000;
+}
+
+
+/* 일반적인 스타일 */
+html{
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body{
+    color: var(--gray);
+    font-family: 'roboto' sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+p{
+    line-height: 1.7;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+h2{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+h1,h2{
+    text-align: center;
+}
+
+header,
+h1,
+h2,
+.inha-date{
+    font-family: 'roboto', sans-serif;
+}
+
+.wrapper{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* 헤더스타일 */
+header{
+    background-color: var(--gray);
+    padding: 2rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+header .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+header a{
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.btn-menu{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+}
+
+.main-nav{
+    background-color: var(--gray);
+    width: 0;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.main-nav li{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.main-nav a{
+    display: block;
+}
+
+.main-nav.open-menu{
+    width: 100%;
+}
+
+
+/* 메인 */
+#inha{
+    background-color: var(--light-blue);
+    background-image: url(../images/back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: screen;
+    animation: bg-color 24s infinite; 
+    /* keyframes bg-color 속성 */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes bg-color{
+    0%{background-color: var(--light-blue);}
+    12.5%{background-color: var(--pink);}
+    37.5%{background-color: var(--purple);}
+    50%{background-color: var(--orange);}
+    62.5%{background-color: var(--yellow);}
+    75%{background-color: var(--libht-green);}
+    87.5%{background-color: var(--blue);}
+    100%{background-color: var(--light-blue);}
+}
+
+#inha h1{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.inha-date{
+    text-align: center;
+    border-top: 3px solid var(--gray);
+    border-bottom: 3px solid var(--gray);
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 어바웃미 */
+#info{
+    padding: 4rem 1rem;
+}
+
+#info h2{
+    background: linear-gradient(var(--black),var(--black));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* 그라디언트 배경을 텍스트 모양에 맞춰 잘라내어 줌. */
+    font-size: 3rem;
+}
+
+#info p{
+    margin-bottom: 2rem;
+    padding-top: 4rem;
+}
+
+#info img{
+    border-radius: 50%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* 뉴스 */
+#news{
+    background: linear-gradient(var(--light-blue),var(--pink));
+    padding: 7rem 0;
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+}
+
+#news h2{
+    color: var(--white);
+    font-size: 3rem;
+}
+
+.news-table{
+    color: var(--white);
+    width: 100%;
+}
+
+.news-table tr{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.news-table td{
+    line-height: 3;
+    /* display: block; */
+}
+
+.news-date{
+    color: var(--black);
+    padding-top: 1rem;
+}
+
+.mews-content{
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
+}
+
+/* 워커 */
+
+body{
+    background-image: url(../images/de876e352b8f02d5685f8ffc64f9e558.jpg);
+}
+
+#worker{
+    padding: 4rem 1rem;
+    padding-top: 7rem;
+}
+
+#worker h2{
+    background: linear-gradient(var(--pink),var(--blue));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-fill-color: transparent;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.worker-list{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.worker-text{
+    margin-left: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+#worker h3{
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+#worker img{
+    border-radius: 50%;
+    width: 30%;
+}
+
+#worker p{
+    font-size: 1.2rem;
+}
+
+/* question */
+
+#question{
+    background: linear-gradient(var(--pink), var(--yellow));
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100% );
+    -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100% );
+    padding: 6rem 1rem 2rem;
+}
+
+#question h2{
+    color: var(--white);
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+}
+
+.question-form{
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.question-form label{
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.question-field{
+    background: rgba(255, 255, 255, 0.6);
+    padding: 1rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.question-btn{
+    background: var(--gray);
+    color: var(--white);
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Footer */
+
+.footer{
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--white);
+    background-color: var(--gray);
+    box-sizing: border-box;
+    position: fixed;
+}
+

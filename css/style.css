@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+@font-face { font-family: 'GmarketSansLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Noto Sans Kr', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin: 0;
+}
+
+.heading{
+    font-family: 'GmarketSansLight';
+    font-size: 68px;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1.5rem;
+    margin-bottom: 100px;
+}
+
+.heading span{
+    color: #ff3cae;
+}
+
+.art_inner{
+    width: 1350px;
+    margin: 0 auto;
+}
+
+.arts{
+    display: flex;
+    gap: 20px;
+    counter-reset: item;
+    /* 카운터를 초기화 & 글자순서를 정한다  */
+}
+
+.art{
+    flex: 1;
+    position: relative;
+}
+
+.art:before{
+    /* 특정요소 콘텐츠 내용 앞에 가상요소를 추가해주는 선택자 */
+    content: counter(item); /* item값이 텍스트로 출력 */ 
+    counter-increment: item;
+    /* item 카운터 요소. 1씩 증가 */
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-color: #a9a9a9;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+    z-index: 10;
+    border-radius: 0 0 7px 0;
+}
+
+.art:hover:before{
+    background-color: #ff3cae;
+}
+
+.photo{
+    position: relative;
+    height: 400px;
+}
+
+.photo a img{
+    width: 100%;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.photo a img:first-child{
+    z-index: 1;
+}
+
+.photo:hover a img:first-child{
+    opacity: 0;
+}
+
+.detail{
+    position: relative;
+}
+
+.detail span{
+    display: block;
+}
+
+.detail .year b{
+    margin-right: 10px;
+    color: #ff3cae;
+}
+
+.detail .name{
+    font-weight: 400;
+}

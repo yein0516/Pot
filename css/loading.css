@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+    font-family: "Noto sans", sans-serif;
+    font-size: 20px;
+    color: #333;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    line-height: 1.2rem;
+    margin: 0;
+    background-image: url(../images/img_04.jpg);
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;  /* 임시 */
+}
+
+.text-box{
+    line-height: 5rem;
+}
+
+.text-box span{
+    font-size: 5rem;
+    color: #c5c5c5;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+}
+
+.text-box span:nth-child(1){
+    letter-spacing: 70px;
+}
+
+.text-box span:nth-child(2){
+    letter-spacing: 2px;
+}
+
+.text-box span:nth-child(3){
+    letter-spacing: 25px;
+}
+
+.text-box span:nth-child(4){
+    letter-spacing: 50px;
+}
+
+.text-box span::first-letter{
+    color: #ff3a9d;
+}
